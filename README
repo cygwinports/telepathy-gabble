@@ -1,0 +1,67 @@
+telepathy-gabble
+------------------------------------------
+Telepathy IRC connection manager
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  glib2-2.12.12-1
+  libdbus-glib_1_2-0.73-1
+  loudmouth-1.2.1-1
+  telepathy-glib-0.5.13-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://telepathy.freedesktop.org/wiki/
+
+Canonical download:
+  http://telepathy.freedesktop.org/releases/telepathy-gabble/
+
+-------------------------------------------
+
+Build instructions:
+  unpack telepathy-gabble-0.5.12-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./telepathy-gabble-0.5.12-X.cygport all
+
+This will create:
+  /usr/src/telepathy-gabble-0.5.12-X-src.tar.bz2
+  /usr/src/telepathy-gabble-0.5.12-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/telepathy-gabble.exe
+  /usr/share/dbus-1/services/org.freedesktop.Telepathy.ConnectionManager.gabble.service
+  /usr/share/doc/Cygwin/telepathy-gabble-0.5.12.README
+  /usr/share/doc/telepathy-gabble-0.5.12/AUTHORS
+  /usr/share/doc/telepathy-gabble-0.5.12/COPYING
+  /usr/share/doc/telepathy-gabble-0.5.12/ChangeLog
+  /usr/share/doc/telepathy-gabble-0.5.12/INSTALL
+  /usr/share/telepathy/managers/gabble.manager
+
+------------------
+
+Port Notes:
+
+----- version 0.5.12-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
