@@ -1,4 +1,4 @@
 category: Net
-requires: cygwin glib2 libdbus-glib_1_2 loudmouth telepathy-glib
+requires: cygwin glib2 libdbus1_3 libdbus-glib_1_2 libgetaddrinfo0 loudmouth libtelepathy-glib0
 sdesc: "Telepathy Jabber/XMPP connection manager"
 ldesc: "Telepathy Jabber/XMPP connection manager"
