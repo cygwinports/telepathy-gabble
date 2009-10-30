@@ -3,5 +3,6 @@ inherit gnome2
 DESCRIPTION="Telepathy Jabber/XMPP connection manager"
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/"
 SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
+PATCH_URI="0.8.7-unix-transport.patch"
 
 CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy"

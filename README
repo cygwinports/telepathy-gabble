@@ -3,23 +3,26 @@ telepathy-gabble
 Telepathy IRC connection manager
 
 Runtime requirements:
-  cygwin-1.7.0-50
-  libdbus1_3-1.2.14-1
+  cygwin-1.7.0-62
   libdbus-glib_1_2-0.80-10
-  libgcc1-4.3.2-2
-  libglib2.0_0-2.20.3-1
+  libdbus1_3-1.2.16-1
+  libgcc1-4.3.4-1
+  libglib2.0_0-2.22.2-1
   libloudmouth1_0-1.4.3-10
+  libsoup2.4_1-2.28.1-1
   libtelepathy-glib0-0.7.32-1
+  libuuid1-1.41.9-1
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-10
-  automake1.10-1.10.2-10
-  binutils-20080624-2
-  cygport-0.9.7-1
-  gawk-3.1.6-2
-  gcc4-core-4.3.2-2
-  libtool-2.2.7a-13
+  automake1.9-1.9.6-10
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-1
+  gnome-common-2.28.0-1
+  libtool-2.2.7a-14
   make-3.81-2
   pkg-config-0.23b-10
   sed-4.1.5-2
@@ -33,36 +36,22 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack telepathy-gabble-0.7.27-X-src.tar.bz2
+  unpack telepathy-gabble-0.8.7-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./telepathy-gabble-0.7.27-X.cygport all
+  cygport ./telepathy-gabble-0.8.7-X.cygport all
 
 This will create:
-  /usr/src/telepathy-gabble-0.7.27-X-src.tar.bz2
-  /usr/src/telepathy-gabble-0.7.27-X.tar.bz2
+  /usr/src/telepathy-gabble-0.8.7-X-src.tar.bz2
+  /usr/src/telepathy-gabble-0.8.7-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
-
-  /usr/lib/telepathy/telepathy-gabble.exe
-  /usr/share/dbus-1/services/org.freedesktop.Telepathy.ConnectionManager.gabble.service
-  /usr/share/doc/telepathy-gabble/AUTHORS
-  /usr/share/doc/telepathy-gabble/COPYING
-  /usr/share/doc/telepathy-gabble/ChangeLog
-  /usr/share/doc/telepathy-gabble/NEWS
-  /usr/share/doc/telepathy-gabble/README
-  /usr/share/doc/telepathy-gabble/muc-bytestream.html
-  /usr/share/doc/telepathy-gabble/olpc.html
-  /usr/share/doc/telepathy-gabble/tubes.html
-  /usr/share/man/man8/telepathy-gabble.8.gz
-  /usr/share/telepathy/managers/gabble.manager
-
-------------------
-
 Port Notes:
+
+----- version 0.8.7-1 -----
+Version bump.
 
 ----- version 0.7.27-1 -----
 Version bump.
