@@ -1,0 +1,25 @@
+--- origsrc/telepathy-gabble-0.10.4/lib/ext/wocky/tests/Makefile.am	2010-10-29 06:09:41.000000000 -0500
++++ src/telepathy-gabble-0.10.4/lib/ext/wocky/tests/Makefile.am	2010-12-15 23:39:41.881288700 -0600
+@@ -238,12 +238,10 @@ AM_CFLAGS = $(ERROR_CFLAGS) $(GCOV_CFLAG
+ AM_LDFLAGS = $(GCOV_LIBS) @GLIB_LIBS@ @LIBXML2_LIBS@ @TLS_LIBS@
+ LDADD = $(top_builddir)/wocky/libwocky.la
+ 
+-check_PROGRAMS = $(TEST_PROGS)
++noinst_PROGRAMS = $(TEST_PROGS)
+ 
+ check_c_sources = $(notdir $(wildcard $(srcdir)/*.c) $(wildcard $(srcdir)/*.h))
+ 
+-all: $(TEST_PROGS)
+-
+ test-report: test-report.xml
+ 	gtester-report $(top_builddir)/tests/$@.xml > \
+ 	  $(top_builddir)/tests/$@.html
+@@ -258,7 +256,7 @@ test: ${TEST_PROGS}
+ 		echo "No python available, not summarizing test results" ; \
+ 	fi
+ 
+-test-%: wocky-%-test
++test-%: wocky-%-test$(EXEEXT)
+ 	gtester -o $@-report.xml -k --verbose $<
+ 	@if [ -x $(which python) ] ; then \
+ 		$(SUMMARY) $@-report.xml ; \
