@@ -9,6 +9,6 @@ PATCH_URI="
 	0.10.4-exeext.patch
 "
 
-DIFF_EXCLUDES="reference"
+DIFF_EXCLUDES="reference gtk-doc.make"
 
-CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --disable-plugins"
+CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --with-ca-certificates=/usr/ssl/certs/ca-bundle.crt --disable-plugins"
