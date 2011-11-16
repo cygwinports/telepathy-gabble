@@ -9,6 +9,15 @@ PATCH_URI="
 	0.10.4-exeext.patch
 "
 
+DEPEND="gnome-common
+	pkgconfig(dbus-glib-1)
+	pkgconfig(gnutls)
+	pkgconfig(libsoup-2.4)
+	pkgconfig(libxml-2.0)
+	pkgconfig(nice)
+	pkgconfig(sqlite3)
+	pkgconfig(telepathy-glib)"
+
 DIFF_EXCLUDES="reference gtk-doc.make"
 
 CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --with-ca-certificates=/usr/ssl/certs/ca-bundle.crt --disable-plugins"
