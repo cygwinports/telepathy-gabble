@@ -1,0 +1,11 @@
+--- origsrc/telepathy-gabble-0.16.0/plugins/Makefile.am	2012-03-26 13:00:06.000000000 -0500
++++ src/telepathy-gabble-0.16.0/plugins/Makefile.am	2012-05-07 09:34:33.870374400 -0500
+@@ -40,7 +40,7 @@ EXTRA_DIST = \
+ 	telepathy-gabble-xmpp-console
+ endif
+ 
+-AM_LDFLAGS = -avoid-version -shared -no-undefined
++AM_LDFLAGS = -module -avoid-version -shared -no-undefined
+ 
+ ALL_PLUGIN_LIBS = \
+ 	@WOCKY_LIBS@ \

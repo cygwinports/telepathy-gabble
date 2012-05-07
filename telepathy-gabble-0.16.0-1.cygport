@@ -7,6 +7,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 PATCH_URI="
 	0.8.7-unix-transport.patch
 	0.10.4-exeext.patch
+	0.16.0-plugins.patch
 "
 
 DEPEND="gnome-common
@@ -20,4 +21,6 @@ DEPEND="gnome-common
 
 DIFF_EXCLUDES="reference gtk-doc.make"
 
-CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --with-ca-certificates=/usr/ssl/certs/ca-bundle.crt --disable-plugins"
+CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --with-ca-certificates=/usr/ssl/certs/ca-bundle.crt"
+
+KEEP_LA_FILES="none"
