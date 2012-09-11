@@ -1,5 +1,8 @@
 inherit gnome2
 
+NAME="telepathy-gabble"
+VERSION=0.16.3
+RELEASE=1
 CATEGORY="Net"
 SUMMARY="Telepathy Jabber/XMPP connection manager"
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/"
