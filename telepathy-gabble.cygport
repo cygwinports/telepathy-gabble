@@ -1,12 +1,12 @@
 inherit gnome2
 
 NAME="telepathy-gabble"
-VERSION=0.16.5
+VERSION=0.16.6
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Telepathy Jabber/XMPP connection manager"
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/"
-SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
+SRC_URI="http://telepathy.freedesktop.org/releases/${NAME}/${NAME}-${VERSION}.tar.gz"
 
 PATCH_URI="
 	0.10.4-exeext.patch
@@ -26,5 +26,4 @@ DEPEND="gnome-common
 
 DIFF_EXCLUDES="reference gtk-doc.make"
 
-CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy --with-ca-certificates=/usr/ssl/certs/ca-bundle.crt"
-
+CYGCONF_ARGS="--with-ca-certificates=/usr/ssl/certs/ca-bundle.crt"
