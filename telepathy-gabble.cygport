@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="telepathy-gabble"
-VERSION=0.16.7
+VERSION=0.18.2
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Telepathy Jabber/XMPP connection manager"
@@ -27,3 +27,13 @@ DEPEND="gnome-common
 DIFF_EXCLUDES="reference gtk-doc.make"
 
 CYGCONF_ARGS="--with-ca-certificates=/usr/ssl/certs/ca-bundle.crt"
+
+src_compile() {
+	cd ${S}
+	gnome2_autoreconf
+	cd ${S}/lib/ext/wocky
+	cygautoreconf
+	cd ${B}
+	cygconf
+	cygmake
+}
