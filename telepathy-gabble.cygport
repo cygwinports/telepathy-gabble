@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="telepathy-gabble"
-VERSION=0.18.2
+VERSION=0.18.3
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Telepathy Jabber/XMPP connection manager"
@@ -11,6 +11,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${NAME}/${NAME}-${VERSION}.ta
 PATCH_URI="
 	0.10.4-exeext.patch
 	0.16.0-plugins.patch
+	0.18.3-plugindir.patch
 "
 
 REQUIRES="ca-certificates girepository-GtkSourceView3.0"

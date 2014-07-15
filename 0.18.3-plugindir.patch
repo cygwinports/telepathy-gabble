@@ -1,0 +1,28 @@
+Avoid FTBFS when a previous version is already installed.
+
+A noinst program (write-mgr-file), which is linked against the internal
+libraries, is run during the build to create the gabble.manager file.
+Since the libraries are linked with -release $(VERSION) because their
+APIs are not yet stable, if another version of telepathy-gabble is
+installed, those plugins would be found but they would then load their
+version of the libs, which would clash with those already loaded by the
+program.  (Normally they would have the same SONAME, so the libtool wrapper
+would assure that the in-tree library was loaded first.)
+
+--- origsrc/telepathy-gabble-0.18.3/configure.ac	2014-05-07 09:47:25.000000000 -0500
++++ src/telepathy-gabble-0.18.3/configure.ac	2014-07-14 18:41:45.454642500 -0500
+@@ -243,12 +243,12 @@ AC_SUBST(GLIB_GENMARSHAL)
+ #
+ # Private directory for Wocky and the gabble-plugins library
+ if test "x$pluginexeclibdir" = x; then
+-  pluginexeclibdir='${libdir}/telepathy/gabble-0/lib'
++  pluginexeclibdir="\${libdir}/telepathy/gabble-$VERSION/lib"
+ fi
+ AC_ARG_VAR([pluginexeclibdir])
+ # The actual plugins
+ if test "x$pluginexecdir" = x; then
+-  pluginexecdir='${libdir}/telepathy/gabble-0/plugins'
++  pluginexecdir="\${libdir}/telepathy/gabble-$VERSION/plugins"
+ fi
+ AC_ARG_VAR([pluginexecdir])
+ 
