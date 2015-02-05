@@ -14,7 +14,7 @@ PATCH_URI="
 	0.18.3-plugindir.patch
 "
 
-REQUIRES="ca-certificates girepository-GtkSourceView3.0"
+REQUIRES="ca-certificates girepository-GtkSource3.0"
 
 DEPEND="gnome-common
 	pkgconfig(dbus-glib-1)
